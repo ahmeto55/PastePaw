@@ -1,266 +1,99 @@
 <h1 align="center">
-    <picture>
-      <img src="https://raw.githubusercontent.com/XueshiQiao/PastePaw/refs/heads/main/src-tauri/icons/64x64.png" alt="Claude-Mem" width="32">
-    </picture>
-    PastePaw - Clipboard History Manager
+  <picture>
+    <img src="https://githubusercontent.com" alt="PastePaw" width="52">
+  </picture>
+  <br>
+  PastePaw &mdash; Right-Edge Sidebar Fork
 </h1>
 
-
 <p align="center">
-  <a href="README_CN.md">中文</a> •
-  <a href="README.md">English</a> •
-  <a href="https://pastepaw.com/">Website</a> •
-  <a href="https://xueshi.dev">Author</a>
+  <a href="https://github.com"><img src="https://shields.io" alt="GitHub release"></a>
+  <a href="LICENSE"><img src="https://shields.io" alt="MIT License"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/XueshiQiao/PastePaw/actions/workflows/release.yml?branch=main"><img src="https://img.shields.io/github/actions/workflow/status/XueshiQiao/PastePaw/release.yml?branch=main&style=flat" alt="CI status"></a>
-  <a href="https://github.com/XueshiQiao/PastePaw/releases"><img src="https://img.shields.io/github/v/release/XueshiQiao/PastePaw?include_prereleases&style=flat" alt="GitHub release"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPL3.0-blue.svg?style=flat" alt="MIT License"></a>
+  A customized Windows fork of <a href="https://github.com">PastePaw</a> (v1.6.0) featuring a <code>440px</code> frosted-glass vertical sidebar along the right edge of the screen, an Egyptian Blue (<code>#1434A4</code>) accent theme, and a Spacebar Quick Look preview for images, code, and formatted notes.
 </p>
 
-A beautiful clipboard history manager for Windows, built with Rust + Tauri + React + TypeScript.
-
-Also available for **macOS** on the [App Store](https://apps.apple.com/us/app/pastepaw/id6759132043?mt=12) — visit [pastepaw.com](https://pastepaw.com/) for more.
-
-## Features
-
-- 🔒 **Private** - IMPORTANT! All data stored locally
-- 🎨 **Beautiful UI** - Modern dark/light theme with native Windows Mica & Mica-Alt window effects
-- ⚡ **Fast & Lightweight** - Built with Rust for performance
-- 📋 **Clipboard History** - Automatically saves everything you copy
-- 🖥️ **Support multiple Displays** - Show on the active display
-- 🔍 **Search** - Quickly find previously copied content
-- 📁 **Folders** - Organize clips into custom folders
-- 🚫 **Application Exceptions** - Ignore content from specific sensitive apps (e.g., Password Managers)
-- ⌨️ **Customizable Hotkey** - Set your preferred shortcut to open the history
-- 🔄 **Infinite Scroll** - Seamlessly browse through unlimited history
-- 🛡️ **Smart Filtering** - Intelligent debounce logic to ignore "Ghost Copies" from other clipboard tools
-- 🤖 **AI Powered** - Built-in AI to summarize, translate, explain code, and fix grammar
-- ⚙️ **Customizable AI** - Fully customize AI action names and system prompts to suit your workflow
-
-## Screenshots
-
-![docs/paste_paw_dark.png](docs/screenshot_win_panes.png)
-
-### Light theme
-![docs/paste_paw_dark.png](docs/screenshot_win_light.png)
-### Dark theme
-![docs/paste_paw_dark.png](docs/screenshot_win_dark.png)
-
-
-## Installation Guide
-
-### 1. Install via Winget
-
-```bash
-winget install XueshiQiao.PastePaw
-```
-
-### 2. Download from GitHub Releases (Windows)
-
-Download the latest installer directly from:
-[https://github.com/XueshiQiao/PastePaw/releases](https://github.com/XueshiQiao/PastePaw/releases)
-
-> 🔍 **Security:** Every release is automatically scanned with [VirusTotal](https://www.virustotal.com/) (70+ antivirus engines). Scan results are linked at the bottom of each release note.
-
-
-## Keyboard Shortcuts
-
-### Global
-- **Toggle Window**: `Ctrl+Shift+V` (Default, Customizable in Settings)
-
-### In-App
-
-- `Ctrl + F` - Focus search
-- `Escape` - Close window / Clear search
-- `Enter` - Paste selected item
-- `Delete` - Delete selected item
-- `P` - Pin/Unpin selected item
-- `Arrow Up/Down` - Navigate items
-
-
-
-## Application Exceptions (Ignored Apps)
-
-PastePaw allows you to exclude specific applications from being recorded in the clipboard history. This is useful for privacy-sensitive applications like password managers or banking apps.
-
-(You need to provide the API Key for the AI provider)
-
-**Logic & Behavior:**
-- **How to manage:** Go to Settings -> Ignored Applications. You can browse for an executable (`.exe`) or strictly type its name.
-- **Privacy Protection:** When content is copied, PastePaw checks the source application against your ignore list.
-- **Robust Matching:** The system checks against **both**:
-    1.  **Executable Name** (e.g., `notepad.exe`) - Matches any instance of this app regardless of location.
-    2.  **Full File Path** (e.g., `C:\Windows\System32\notepad.exe`) - Matches only the specific installed instance.
-- **Case Insensitive:** Matching is case-insensitive to ensure reliable detection on Windows.
-
-## AI Features
-
-PastePaw integrates powerful AI capabilities to help you process your clipboard content more efficiently.
-
-- **Actions:** Right-click any clip to access AI actions:
-    - **Summarize:** Get a concise summary of long texts.
-    - **Translate:** Translate content to your preferred language.
-    - **Explain Code:** Understand complex code snippets instantly.
-    - **Fix Grammar:** Polishing your writing with professional grammar checks.
-- **Full Customization:**
-    - **Custom Names:** Rename AI actions in Settings (e.g., change "Translate" to "To Spanish").
-    - **Custom Prompts:** Override default system prompts to tailor the AI's behavior and output style.
-    - **Provider Support:** Support for OpenAI, DeepSeek, and other OpenAI-compatible APIs.
-
-## Tech Stack
-
-- **Backend**: Rust + Tauri 2.x
-- **Frontend**: React 18 + TypeScript
-- **Database**: SQLite
-- **Styling**: Tailwind CSS
-- **Package Manager**: pnpm
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- Rust 1.70+
-- pnpm
-
-### Dev commands
-
-```bash
-# Install dependencies
-pnpm install
-
-# Install Tauri CLI
-cargo install tauri-cli
-
-# Run development build
-pnpm tauri dev
-```
-
-### Building
-
-```bash
-# Build for production
-pnpm tauri build
-```
-
-## Project Structure
-
-```
-PastePaw/
-├── src-tauri/           # Rust backend
-│   ├── src/
-│   │   ├── main.rs      # App entry point
-│   │   ├── lib.rs       # Core logic
-│   │   ├── clipboard.rs # Clipboard monitoring
-│   │   ├── database.rs  # SQLite operations
-│   │   ├── commands.rs  # Tauri IPC commands
-│   │   └── models.rs    # Data models
-│   └── Cargo.toml
-├── frontend/            # React frontend
-│   ├── src/
-│   │   ├── components/  # UI components
-│   │   ├── hooks/       # React hooks
-│   │   ├── types/       # TypeScript types
-│   │   └── App.tsx
-│   └── package.json
-└── README.md
-```
-
-## Development Notes
-
-### Tauri Command Argument Mapping
-
-Tauri v2 enforces a strict case mapping between JavaScript/TypeScript and Rust:
-
-- **JavaScript/Frontend:** Use `camelCase` for argument names in `invoke` calls (e.g., `filterId`).
-- **Rust/Backend:** Use `snake_case` for function arguments in `#[tauri::command]` (e.g., `filter_id`).
-
-**Example:**
-*   **Frontend:** `invoke('get_clips', { filterId: 'pinned' })`
-*   **Backend:** `pub fn get_clips(filter_id: Option<String>)`
-
-Failure to follow this convention (e.g., passing `snake_case` from the frontend) will result in arguments being passed as `null` or `None` to the backend.
-
-### Window Behavior & Multi-Monitor Support
-
-The application is designed to appear on the **active monitor** (the one containing the mouse cursor) whenever the global hotkey is pressed.
-
-- **Detection Logic:**
-    - Located in `src-tauri/src/lib.rs` (`animate_window_show`).
-    - Uses the Windows API `GetCursorPos` (via the `windows` crate) to determine the global mouse coordinates.
-    - Iterates through `window.available_monitors()` to find the monitor whose bounds contain the cursor point.
-    - Fallback: If the cursor position cannot be determined, it defaults to `window.current_monitor()`.
-
-- **Positioning:**
-    - The window is positioned at the bottom of the detected active monitor's work area (excluding taskbar).
-    - An animation slides the window up from the bottom edge.
-
-### Adjusting the Layout
-
-The application uses a centralized layout system to ensure the native window and the virtualized list remain synchronized.
-
--   **Backend Constants:** `src-tauri/src/constants.rs` (Controls the OS window size).
-*   **Frontend Constants:** `frontend/src/constants.ts` (Controls UI rendering and math).
-
-#### How to change Card Height
-The card height is dynamic and fills the available window space. To change it:
-1.  Update `WINDOW_HEIGHT` in **both** `constants.rs` and `constants.ts` to the same value.
-2.  Restart the application (required for Rust changes).
-
-#### How to change Vertical Spacing (Safe Zones)
-To add more or less space at the top/bottom of the cards (e.g., to prevent clipping during hover):
-1.  Modify `CARD_VERTICAL_PADDING` in `frontend/src/constants.ts`.
-2.  Increasing this value makes cards **shorter**; decreasing it makes them **taller**.
-
-
-## Architecture & Design Decisions
-
-### Why Frontend Clipboard for Images? (Solving "Thread does not have a clipboard open")
-
-We use a **Hybrid Clipboard Approach** to solve the notorious Windows `OSError 1418` (Thread does not have a clipboard open).
-
--   **Backend (Rust)**: Great for monitoring the clipboard and handling database checks. However, on Windows, clipboard access is bound to the thread that created the window (STA). Trying to write images from a background Tokio thread often leads to race conditions and "OpenClipboard Failed" errors. The solution would be to write images on the main thread, but this severely slows down UI responsiveness and causes lag.
--   **Frontend (WebView2)**: The browser engine has a mature, stable implementation of `navigator.clipboard.write`.
-
-**Our Solution:**
-1.  **Frontend**: Writes the **Image Blob** directly to the system clipboard.
-2.  **Backend**: Updates the internal database and triggers the paste shortcut (`Shift+Insert`).
-
-### Why use `Shift+Insert` for Pasting?
-
-We use `Shift + Insert` as the default paste trigger instead of `Ctrl + V`.
-
--   **Terminal Compatibility**: `Ctrl+V` often fails in terminal emulators (PowerShell, WSL, VS Code Terminal), sending a control character instead of pasting.
--   **Legacy Standard**: `Shift+Insert` is the universal paste standard recognized by virtually all Windows applications, including terminals and legacy software.
-
-### Sequence Diagram for Image Pasting (Windows)
-
-```mermaid
-sequenceDiagram
-    actor User
-    participant FE as Frontend (React/App.tsx)
-    participant BE as Backend (Rust/commands.rs)
-    participant BROWSER as WebView2 Clipboard API
-    participant OS as OS / Target App
-
-    User->>FE: Double click image clip
-    activate FE
-    FE->>BE: invoke('get_clip_detail', { id })
-    BE-->>FE: Full image (base64)
-    FE->>FE: base64ToBlob(...)
-    FE->>BROWSER: navigator.clipboard.write([ClipboardItem])
-    BROWSER->>OS: Clipboard image data set
-    FE->>BE: invoke('paste_clip', { id })
-    deactivate FE
-
-    activate BE
-    BE->>BE: Update clip timestamp/LRU
-    Note over BE: On Windows, backend does not rewrite image bytes
-    BE->>OS: Hide window
-    BE->>OS: Send Shift+Insert (when auto-paste is enabled)
-    deactivate BE
-
-    OS->>User: Pasted image appears
-```
+<h2>Changes from Upstream</h2>
+
+<h3>Window &amp; Sidebar Layout (<code>src-tauri/src/lib.rs</code>, <code>frontend/src/App.tsx</code>)</h3>
+<ul>
+  <li>Replaced the wide bottom dock geometry in <code>animate_window_show</code>, <code>animate_window_hide</code>, and <code>update_window_size</code> with a <code>440px</code>-wide floating vertical sidebar anchored to the right edge of the active monitor.</li>
+  <li>Applied frosted-glass container styling (<code>rounded-2xl</code>, subtle border highlight, drop shadow, and <code>backdrop-blur-2xl</code>) to the main application shell.</li>
+</ul>
+
+<h3>Theme &amp; Header (<code>frontend/src/components/ControlBar.tsx</code>)</h3>
+<ul>
+  <li>Redesigned the control bar for a narrow vertical layout with a persistent search bar at the top, quick-action buttons (<code>+</code> and Settings) on the right, and wrapped pill-shaped category tabs underneath.</li>
+  <li>Standardized the accent palette around Egyptian Blue (<code>#1434A4</code>).</li>
+</ul>
+
+<h3>Clip Cards (<code>frontend/src/components/ClipCard.tsx</code>)</h3>
+<ul>
+  <li><b>Images:</b> Render as full-width visual cards (<code>max-h-96 w-full object-contain</code>) without hover cropping or zoom distortion, paired with a frosted footer displaying the source application icon, app name, and relative timestamp.</li>
+  <li><b>Text, Code &amp; URLs:</b> Render as multi-line cards (<code>whitespace-pre-wrap line-clamp-5</code>) with <code>#1434A4</code> / <code>#4d79ff</code> type badges, frosted hover states, and a one-click copy button.</li>
+</ul>
+
+<h3>Spacebar Quick Look (<code>src-tauri/src/lib.rs</code>, <code>frontend/src/components/ClipList.tsx</code>)</h3>
+<ul>
+  <li>Added a <code>set_preview_mode</code> Tauri command that expands the window to <code>85% &times; 88%</code> centered on screen when pressing <kbd>Spacebar</kbd> on a hovered or selected clip, and restores the <code>440px</code> right sidebar when closed.</li>
+  <li>Added <code>FormattedNoteView</code> to reconstruct underlined headings, section headers, and indented bullet/numbered lists when previewing copied notes or documents, alongside full-text detail fetching.</li>
+</ul>
+
+<h3>Build Configuration (<code>src-tauri/tauri.conf.json</code>)</h3>
+<ul>
+  <li>Set <code>"createUpdaterArtifacts": false</code> under <code>"bundle"</code> so standalone Windows NSIS (<code>.exe</code>) and MSI installers can be built locally without the upstream signing key.</li>
+</ul>
+
+<h2>Dependencies</h2>
+
+<h3>Backend &amp; Desktop Runtime</h3>
+<ul>
+  <li><b>Tauri v2 (<code>2.10.x</code>):</b> Rust desktop shell, global hotkeys, window management, and NSIS/MSI bundler.</li>
+  <li><b>Rust (Edition 2021):</b> Native backend commands, SQLite history storage, and window geometry logic.</li>
+</ul>
+
+<h3>Frontend</h3>
+<ul>
+  <li><b>React (<code>18.3.1</code>) &amp; TypeScript (<code>5.9.3</code>):</b> Component architecture and static type safety.</li>
+  <li><b>Vite (<code>5.4.21</code>):</b> Frontend build tool and asset bundler.</li>
+  <li><b>Tailwind CSS (<code>3.4.19</code>) &amp; <code>@tailwindcss/typography</code>:</b> Layout styling and formatted note typography.</li>
+  <li><b>Framer Motion (<code>12.38.0</code>):</b> Sidebar and preview transitions.</li>
+  <li><b>Lucide React (<code>0.294.0</code>):</b> Vector UI icons.</li>
+  <li><b>React Window (<code>2.2.5</code>):</b> Virtualized list scrolling.</li>
+  <li><b>React Markdown (<code>10.1.0</code>):</b> Markdown preview rendering.</li>
+  <li><b>i18next (<code>23.16.8</code>) &amp; <code>react-i18next</code> (<code>14.1.3</code>):</b> Multi-language localization.</li>
+  <li><b>Utilities:</b> <code>date-fns</code> (<code>2.30.0</code>), <code>clsx</code>, <code>tailwind-merge</code>, <code>sonner</code>, <code>use-shortcut-recorder</code>.</li>
+</ul>
+
+<h3>Tauri Plugins</h3>
+<ul>
+  <li><code>@tauri-apps/api</code> (<code>2.10.1</code>)</li>
+  <li><code>@tauri-apps/plugin-clipboard-manager</code> (<code>2.3.2</code>)</li>
+  <li><code>@tauri-apps/plugin-log</code> (<code>2.8.0</code>)</li>
+  <li><code>@tauri-apps/plugin-opener</code> (<code>2.5.3</code>)</li>
+  <li><code>@tauri-apps/plugin-process</code> (<code>2.3.1</code>)</li>
+  <li><code>@tauri-apps/plugin-updater</code> (<code>2.10.0</code>)</li>
+</ul>
+
+<h2>Installation &amp; Shortcuts</h2>
+<ol>
+  <li>Download <code>PastePaw_1.6.0_x64-setup.exe</code> (or <code>.msi</code>) from the <a href="https://github.com">Releases</a> page and run the installer.</li>
+  <li>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> (or <kbd>Win</kbd> + <kbd>V</kbd> if remapped via Windows PowerToys) to toggle the right-edge sidebar.</li>
+  <li>Hover over or select any clip and press <kbd>Spacebar</kbd> to open or close the centered Quick Look preview.</li>
+</ol>
+
+<h2>Building from Source</h2>
+<p>Requires Node.js (v18+) and Rust (MSVC toolchain on Windows):</p>
+
+<pre><code>npm install
+npx tauri build -c "{\"build\":{\"beforeBuildCommand\":\"npm run build\"}}"</code></pre>
+
+<p>Installers are generated in <code>src-tauri\target\release\bundle\nsis\</code> and <code>src-tauri\target\release\bundle\msi\</code>.</p>
+
+<h2>Credits</h2>
+<ul>
+  <li><b>Upstream Project:</b> <a href="https://github.com">PastePaw</a> by <a href="https://github.com">@XueshiQiao</a></li>
+  <li><b>Fork Modifications:</b> <a href="https://github.com">@ahmeto55</a> (developed with assistance from Google Gemini)</li>
+</ul>
