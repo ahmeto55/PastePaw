@@ -15,6 +15,26 @@
   A customized Windows fork of <a href="https://github.com">PastePaw</a> (v1.6.0) featuring a <code>440px</code> frosted-glass vertical sidebar along the right edge of the screen, an Egyptian Blue (<code>#1434A4</code>) accent theme, and a Spacebar Quick Look preview for images, code, and formatted notes.
 </p>
 
+<h2>Screenshots</h2>
+<table>
+  <tr>
+    <th align="center">Floating Right-Edge Sidebar</th>
+    <th align="center">Spacebar Quick Look (Formatted Notes)</th>
+    <th align="center">Spacebar Quick Look (Images)</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <!-- 1. Select this comment and press Ctrl+V to paste your Right-Edge Sidebar screenshot -->
+    </td>
+    <td align="center">
+      <!-- 2. Select this comment and press Ctrl+V to paste your Formatted Note Quick Look screenshot -->
+    </td>
+    <td align="center">
+      <!-- 3. Select this comment and press Ctrl+V to paste your Image Quick Look screenshot -->
+    </td>
+  </tr>
+</table>
+
 <h2>Changes from Upstream</h2>
 
 <h3>Window &amp; Sidebar Layout (<code>src-tauri/src/lib.rs</code>, <code>frontend/src/App.tsx</code>)</h3>
