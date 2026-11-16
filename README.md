@@ -1,18 +1,11 @@
 <h1 align="center">
-  <picture>
-    <img src="src-tauri/icons/64x64.png" alt="PastePaw" width="52">
-  </picture>
+  <img src="src-tauri/icons/64x64.png" alt="PastePaw" width="52">
   <br>
   PastePaw &mdash; Right-Edge Sidebar Fork
 </h1>
 
 <p align="center">
-  <a href="https://github.com"><img src="https://shields.io" alt="GitHub release"></a>
-  <a href="LICENSE"><img src="https://shields.io" alt="MIT License"></a>
-</p>
-
-<p align="center">
-  A customized Windows fork of <a href="https://github.com">PastePaw</a> (v1.6.0) featuring a <code>440px</code> frosted-glass vertical sidebar along the right edge of the screen, an Egyptian Blue (<code>#1434A4</code>) accent theme, and a Spacebar Quick Look preview for images, code, and formatted notes.
+  A customized Windows fork of <a href="../releases">PastePaw</a> (v1.6.0) featuring a <code>440px</code> frosted-glass vertical sidebar along the right edge of the screen, an Egyptian Blue (<code>#1434A4</code>) accent theme, and a Spacebar Quick Look preview for images, code, and formatted notes.
 </p>
 
 <h2>Screenshots</h2>
@@ -23,15 +16,9 @@
     <th align="center">Spacebar Quick Look (Images)</th>
   </tr>
   <tr>
-    <td align="center">
-      <!-- 1. Select this comment and press Ctrl+V to paste your Right-Edge Sidebar screenshot -->
-    </td>
-    <td align="center">
-      <!-- 2. Select this comment and press Ctrl+V to paste your Formatted Note Quick Look screenshot -->
-    </td>
-    <td align="center">
-      <!-- 3. Select this comment and press Ctrl+V to paste your Image Quick Look screenshot -->
-    </td>
+    <td align="center"><img src="explorer_JIWPGXPsba.png" alt="Floating Right-Edge Sidebar" width="280"></td>
+    <td align="center"><img src="explorer_MvwgCPcAMw.png" alt="Spacebar Quick Look Formatted Notes" width="280"></td>
+    <td align="center"><img src="explorer_bYDNS9Q83e.png" alt="Spacebar Quick Look Images" width="280"></td>
   </tr>
 </table>
 
@@ -99,7 +86,7 @@
 
 <h2>Installation &amp; Shortcuts</h2>
 <ol>
-  <li>Download <code>PastePaw_1.6.0_x64-setup.exe</code> (or <code>.msi</code>) from the <a href="https://github.com">Releases</a> page and run the installer.</li>
+  <li>Download <code>PastePaw_1.6.0_x64-setup.exe</code> (or <code>.msi</code>) from the <a href="../releases">Releases</a> page and run the installer.</li>
   <li>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> (or <kbd>Win</kbd> + <kbd>V</kbd> if remapped via Windows PowerToys) to toggle the right-edge sidebar.</li>
   <li>Hover over or select any clip and press <kbd>Spacebar</kbd> to open or close the centered Quick Look preview.</li>
 </ol>
