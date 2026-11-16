@@ -16,7 +16,7 @@
     <th align="center">Spacebar Quick Look (Images)</th>
   </tr>
   <tr>
-    <td align="center"><img src="explorer_JIWPGXPsba.png" alt="Floating Right-Edge Sidebar" width="280"></td>
+    <td align="center"><img src="explorer_JlWPGXPsba.png" alt="Floating Right-Edge Sidebar" width="280"></td>
     <td align="center"><img src="explorer_MvwgCPcAMw.png" alt="Spacebar Quick Look Formatted Notes" width="280"></td>
     <td align="center"><img src="explorer_bYDNS9Q83e.png" alt="Spacebar Quick Look Images" width="280"></td>
   </tr>
