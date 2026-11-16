@@ -1,6 +1,6 @@
 <h1 align="center">
   <picture>
-    <img src="https://githubusercontent.com" alt="PastePaw" width="52">
+    <img src="src-tauri/icons/64x64.png" alt="PastePaw" width="52">
   </picture>
   <br>
   PastePaw &mdash; Right-Edge Sidebar Fork
